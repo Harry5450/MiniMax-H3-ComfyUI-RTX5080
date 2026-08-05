@@ -1,0 +1,14 @@
+.venv/
+.env
+*.pem
+*oauth*
+rclone.conf
+models/**/*.safetensors
+output/
+input/
+temp/
+beach_prompt*.json
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
