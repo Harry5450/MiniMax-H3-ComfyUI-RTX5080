@@ -30,3 +30,21 @@
 不要提交模型、.venv、輸出影片、OAuth、token 或 rclone 設定。
 
 詳見 docs/HARDWARE.md、docs/MODELS.md、docs/UPSCALE.md、docs/TROUBLESHOOTING.md。
+
+## 安裝（ComfyUI custom node）
+
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/Harry5450/MiniMax-H3-ComfyUI-RTX5080.git MiniMaxH3_Tmp
+cp -r MiniMaxH3_Tmp/custom_nodes/ComfyUI_MiniMaxH3_Director ./ComfyUI_MiniMaxH3_Director
+rm -rf MiniMaxH3_Tmp
+pip install -r ComfyUI_MiniMaxH3_Director/requirements.txt
+```
+
+重啟 ComfyUI 後，在節點選單搜尋 MiniMax H3 即可使用；
+範例工作流見 `custom_nodes/ComfyUI_MiniMaxH3_Director/example_workflows/`。
+
+## 授權
+
+根目錄 `LICENSE` 與 `custom_nodes/ComfyUI_MiniMaxH3_Director/LICENSE`
+為同一份 Apache-2.0 授權（Copyright 2026 ComfyUI-Bernini Contributors）。
